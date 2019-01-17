@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { CarsComponent } from './components/scanner/cars/cars.component';
 import { ScannerComponent } from './components/scanner/scanner.component';
+import { YearsComponent } from './components/scanner/years/years.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ScannerComponent } from './components/scanner/scanner.component';
     NavbarComponent,
     HomeComponent,
     CarsComponent,
-    ScannerComponent
+    ScannerComponent,
+    YearsComponent
   ],
   imports: [
     BrowserModule,

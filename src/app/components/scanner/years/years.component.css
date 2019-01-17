@@ -10,8 +10,8 @@
 }
 
 .option {
-    max-width: 30%;
-    min-width: 30%;
+    max-width: 100%;
+    min-width: 100%;
     padding: 5px;
     text-align: center;
     margin: 10px;
