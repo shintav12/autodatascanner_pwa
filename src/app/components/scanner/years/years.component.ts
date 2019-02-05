@@ -12,11 +12,12 @@ export class YearsComponent implements OnInit {
   constructor(private route:Router, private navService: NavigationService) { }
 
   ngOnInit() {
-    
+    this.navService.changeMenu('Select Year');
   }
 
   redirectToModelType(){
     this.navService.changeMenu('Select Model Type');
+    this.route.navigate(['/scanner/models']);
   }
 
 }

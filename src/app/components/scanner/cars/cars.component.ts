@@ -9,17 +9,14 @@ import { NavigationService } from 'src/app/services/navigation/navigation.servic
 })
 export class CarsComponent implements OnInit {
 
-
-  message: string;
-
   constructor(private route: Router, private navService: NavigationService) { }
 
   ngOnInit() {
-    this.navService.currentMenu.subscribe( message => this.message = message);
+    this.navService.changeMenu('Select Make');
   }
 
   redirectToYear(){
     this.navService.changeMenu("Select a Year");
-    this.route.navigate(['/scanner/year'])
+    this.route.navigate(['/scanner/years'])
   }
 }

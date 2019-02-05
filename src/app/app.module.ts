@@ -10,6 +10,9 @@ import { HomeComponent } from './components/home/home.component';
 import { CarsComponent } from './components/scanner/cars/cars.component';
 import { ScannerComponent } from './components/scanner/scanner.component';
 import { YearsComponent } from './components/scanner/years/years.component';
+import { ModelComponent } from './components/scanner/model/model.component';
+import { EngineComponent } from './components/scanner/engine/engine.component';
+import { ConfirmationComponent } from './components/scanner/confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { YearsComponent } from './components/scanner/years/years.component';
     HomeComponent,
     CarsComponent,
     ScannerComponent,
-    YearsComponent
+    YearsComponent,
+    ModelComponent,
+    EngineComponent,
+    ConfirmationComponent
   ],
   imports: [
     BrowserModule,
