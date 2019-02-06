@@ -16,7 +16,7 @@ export class EngineComponent implements OnInit {
   }
 
   redirectToConfirmation(){
-    this.navService.changeMenu("confirm");
+    this.navService.changeMenu("Confirm");
     this.route.navigate(['/scanner/confirmation']);
   }
 }

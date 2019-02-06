@@ -13,6 +13,7 @@ import { YearsComponent } from './components/scanner/years/years.component';
 import { ModelComponent } from './components/scanner/model/model.component';
 import { EngineComponent } from './components/scanner/engine/engine.component';
 import { ConfirmationComponent } from './components/scanner/confirmation/confirmation.component';
+import { SystemComponent } from './components/scanner/system/system.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ConfirmationComponent } from './components/scanner/confirmation/confirm
     YearsComponent,
     ModelComponent,
     EngineComponent,
-    ConfirmationComponent
+    ConfirmationComponent,
+    SystemComponent
   ],
   imports: [
     BrowserModule,
