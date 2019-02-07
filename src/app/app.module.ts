@@ -14,6 +14,7 @@ import { ModelComponent } from './components/scanner/model/model.component';
 import { EngineComponent } from './components/scanner/engine/engine.component';
 import { ConfirmationComponent } from './components/scanner/confirmation/confirmation.component';
 import { SystemComponent } from './components/scanner/system/system.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { SystemComponent } from './components/scanner/system/system.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],

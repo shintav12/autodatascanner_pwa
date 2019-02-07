@@ -1,39 +1,6 @@
 <app-navbar></app-navbar>
 <div class="options-container ">
-    <div class="option" (click)="redirectToYear()">
-        Acura
-    </div>
-    <div class="option">
-        Acura
-    </div>
-    <div class="option">
-        Acura
-    </div>
-    <div class="option">
-        Acura
-    </div>
-    <div class="option">
-        Acura
-    </div>
-    <div class="option">
-        Acura
-    </div>
-    <div class="option">
-        Acura
-    </div>
-    <div class="option">
-        Acura
-    </div>
-    <div class="option">
-        Acura
-    </div>
-    <div class="option">
-        Acura
-    </div>
-    <div class="option">
-        Acura
-    </div>
-    <div class="option">
-        Acura
+    <div class="option" (click)="redirectToYear(brand.id)" *ngFor="let brand of brands.brands; let i=index;">
+        {{brand.name}}
     </div>
 </div>

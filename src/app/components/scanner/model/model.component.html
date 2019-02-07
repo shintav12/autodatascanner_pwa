@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <div class="options-container container">
-    <div class="option" (click)="redirectToEngineType()">
-        Commdore VE
+    <div class="option" (click)="redirectToEngineType(model.model)" *ngFor="let model of models.models">
+        {{model.model}}
     </div>
 </div>

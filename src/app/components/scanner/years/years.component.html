@@ -1,9 +1,6 @@
 <app-navbar></app-navbar>
 <div class="options-container container">
-    <div class="option" (click)="redirectToModelType()">
-        2009
-    </div>
-    <div class="option">
-        2018
+    <div class="option" (click)="redirectToModelType(year.year)" *ngFor="let year of years.years; let i=index;">
+        {{year.year}}
     </div>
 </div>
