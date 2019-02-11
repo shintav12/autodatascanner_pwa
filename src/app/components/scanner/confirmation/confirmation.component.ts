@@ -27,4 +27,9 @@ export class ConfirmationComponent implements OnInit {
     });
   }
 
+  redirecToCase(){
+    this.navService.changeMenu("Select System");
+    this.route.navigate(['/scanner/system']);
+  }
+
 }

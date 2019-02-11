@@ -47,6 +47,21 @@ export class BrandService {
       map(this.extractData));
   }
 
+  getSystems(): Observable<any> {
+    return this.http.get(environment.api + 'systems/').pipe(
+      map(this.extractData));
+  }
+
+  getOptions(father_slug:string = "", system:number = 1): Observable<any> {
+    if(father_slug == "")
+    return this.http.get(environment.api + 'systems/options/').pipe(
+      map(this.extractData));
+    return this.http.get(environment.api + 'systems/options/' + father_slug +"/" + system ).pipe(
+      map(this.extractData));
+  }
+
+
+
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error);

@@ -7,6 +7,9 @@ import { YearsComponent } from './components/scanner/years/years.component';
 import { ModelComponent } from './components/scanner/model/model.component';
 import { EngineComponent } from './components/scanner/engine/engine.component';
 import { ConfirmationComponent } from './components/scanner/confirmation/confirmation.component';
+import { ShowOptionComponent } from './components/shared/show-option/show-option.component';
+import { SystemComponent } from './components/system/system.component';
+import { ShowOption2Component } from './components/shared/show-option2/show-option2.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -16,7 +19,10 @@ const routes: Routes = [
   { path: 'scanner/years', component: YearsComponent },
   { path: 'scanner/models', component: ModelComponent},
   { path: 'scanner/engines', component: EngineComponent},
-  { path: 'scanner/confirmation', component: ConfirmationComponent}
+  { path: 'scanner/confirmation', component: ConfirmationComponent},
+  { path: 'scanner/system', component: SystemComponent},
+  { path: 'scanner/options', component: ShowOptionComponent},
+  { path: 'scanner/options2', component: ShowOption2Component},
 
 ];
 

@@ -13,8 +13,10 @@ import { YearsComponent } from './components/scanner/years/years.component';
 import { ModelComponent } from './components/scanner/model/model.component';
 import { EngineComponent } from './components/scanner/engine/engine.component';
 import { ConfirmationComponent } from './components/scanner/confirmation/confirmation.component';
-import { SystemComponent } from './components/scanner/system/system.component';
+import { SystemComponent } from './components/system/system.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ShowOptionComponent } from './components/shared/show-option/show-option.component';
+import { ShowOption2Component } from './components/shared/show-option2/show-option2.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { HttpClientModule } from '@angular/common/http';
     ModelComponent,
     EngineComponent,
     ConfirmationComponent,
-    SystemComponent
+    SystemComponent,
+    ShowOptionComponent,
+    ShowOption2Component
   ],
   imports: [
     BrowserModule,
