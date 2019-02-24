@@ -12,20 +12,19 @@ import { BrandService } from 'src/app/services/general/brand.service';
 export class SystemComponent implements OnInit {
 
   constructor(private route: Router, private navService: NavigationService, public brandService: BrandService) { }
-  systems : any = [];
+  systems: any = [];
 
   ngOnInit() {
-    this.brandService.getSystems().subscribe((data: {}) => {
-      console.log(data);
-      this.systems = data;
+    this.brandService.getCase().subscribe((data: any) => {
+      this.systems = data.cases_systems;
     });
     this.navService.changeMenu('Select System');
   }
 
-  redirectToOption(system:any){
-    this.navService.changeSystemId(system)
-    this.navService.changeMenu("Select a Data");
-    this.route.navigate(['/scanner/options'])
+  redirectToOption(system: any) {
+    this.navService.changeSystemId(system);
+    this.navService.changeMenu('Select a Data');
+    this.route.navigate(['/scanner/options']);
   }
 
 }

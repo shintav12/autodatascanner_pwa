@@ -1,0 +1,46 @@
+.options-container {
+    display: flex;
+    position: relative;
+    flex-grow: 1;
+    background-color: #ffffff;
+    color: black;
+    flex-wrap: wrap;
+    padding-top: 15px;
+    flex-direction: row;
+    margin-left:10px;
+}
+
+.option {
+    max-width: 97%;
+    min-width: 97%;
+    padding: 5px;
+    text-align: center;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    background-color: white;
+    font-weight: bolder;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.sub_option {
+    padding: 5px;
+    text-align: center;
+    margin: 10px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    background-color: white;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.option:hover {
+    border-color: #d1b121;
+    color: white;
+    background-color: #00091c;
+}
