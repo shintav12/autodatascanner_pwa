@@ -17,6 +17,7 @@ import { SystemComponent } from './components/system/system.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShowOptionComponent } from './components/shared/show-option/show-option.component';
 import { ShowOption2Component } from './components/shared/show-option2/show-option2.component';
+import { DropdownComponent } from './components/shared/dropdown/dropdown.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ShowOption2Component } from './components/shared/show-option2/show-opti
     ConfirmationComponent,
     SystemComponent,
     ShowOptionComponent,
-    ShowOption2Component
+    ShowOption2Component,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,
