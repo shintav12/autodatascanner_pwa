@@ -1,0 +1,14 @@
+
+<div class="options-container ">
+  <div class="option"  *ngFor="let item of data; let i = index;">
+    <div>
+      <input type="checkbox">
+    </div>
+    <div style="padding-right:70px; flex-grow:1;text-align:left;" >
+        {{item.name}}
+    </div>
+    <div>
+        {{item.value}}
+    </div>
+  </div>
+</div>

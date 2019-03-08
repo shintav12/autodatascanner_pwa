@@ -9,16 +9,18 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  father:string = "";
+  father: string = '';
   message: string;
   constructor(private navservice: NavigationService, private route: Router) { }
 
   ngOnInit() {
-    this.navservice.currentMenu.subscribe(message => this.message = message)
+    this.navservice.currentMenu.subscribe(message => this.message = message);
     this.navservice.currentFatherSlug.subscribe(data => this.father = data);
   }
-  
-  goBack(){
-    this.route.navigate(["/scanner/system"]);
+
+  goBack() {
+    this.navservice.changeFatherId(0);
+    this.navservice.cahangeFatherSlug('');
+    this.route.navigate(['/scanner/system']);
   }
 }

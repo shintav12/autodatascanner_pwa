@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <div class="container options-container ">
-    <div class="option" (click)="redirectToOption(system.id)" *ngFor="let system of systems.system; let i=index;">
+    <div class="option" (click)="redirectToOption(system.id)" *ngFor="let system of systems; let i=index;">
         {{system.name}}
     </div>
 </div>
