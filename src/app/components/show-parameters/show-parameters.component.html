@@ -1,3 +1,62 @@
-<p>
-  show-parameters works!
-</p>
+<div class="topbar">
+    <div>
+        <div class="title">
+            <label>Scanner</label>
+        </div>
+        <div class="hour">
+
+        </div>
+    </div>
+    <div class="options" style="justify-content: space-between">
+        <div class="options">
+            <div class="option_menu" (click)="goBack()">
+                <img src="https://via.placeholder.com/50 ">
+            </div>
+            <div class="option_menu">
+                <img src="https://via.placeholder.com/50">
+            </div>
+        </div>
+        <div>
+            <div class="option_menu" (click)="saveSelectedParams()" *ngIf="show" style="float: right">
+                <img src="https://via.placeholder.com/50">
+            </div>
+            <div class="option_menu" style="float:right">
+                <img class="dropbtn" *ngIf="!show" (click)="showOption()" src="https://via.placeholder.com/50" />
+                <div class="dropdown-content" *ngIf="showOptions" style="right:0;">
+                    <div (click)="showChoseComponent()">PID List</div>
+                    <div>1 Graph</div>
+                    <div>2 Graph</div>
+                    <div>4 Graph</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <label class="menu">{{message}}</label>
+    </div>
+</div>
+<div class="options-container" *ngIf="!show">
+    <div class="option" *ngFor="let item of data; let i=index;">
+        <div style="padding-right:70px; flex-grow:1;text-align:left;">
+            {{item.name}}
+        </div>
+        <div>
+            {{item.value}}
+        </div>
+    </div>
+</div>
+<div *ngIf="show">
+    <div class="options-container ">
+        <div class="option" (click)="selectParam(item, i)" *ngFor="let item of originalArray; let i = index;">
+            <div>
+                <input type="checkbox">
+            </div>
+            <div style="padding-right:70px; flex-grow:1;text-align:left;">
+                {{item.name}}
+            </div>
+            <div>
+                {{item.value}}
+            </div>
+        </div>
+    </div>
+</div>

@@ -11,12 +11,12 @@ export class NavigationService {
   private year = new BehaviorSubject(0);
   private model = new BehaviorSubject('');
   private engine = new BehaviorSubject('');
-
   private slug = new BehaviorSubject('');
   private fatherSlug = new BehaviorSubject('');
   private fatherId = new BehaviorSubject(0);
   private systemId = new BehaviorSubject(1);
   private case = new BehaviorSubject(null);
+  private selectedParameters = new BehaviorSubject(null);
 
   currentMenu = this.menu.asObservable();
   currentChosenCar = this.chosen_car.asObservable();
@@ -28,6 +28,7 @@ export class NavigationService {
   currentFatherId = this.fatherId.asObservable();
   currentSystemId = this.systemId.asObservable();
   currentCase = this.case.asObservable();
+  currentSelectedParameters = this.selectedParameters.asObservable();
 
   constructor() { }
 
@@ -69,6 +70,10 @@ export class NavigationService {
 
   changeCase(_case: any) {
     this.case.next(_case);
+  }
+
+  changeSelectedParameters(_selectedParameters: any){
+    this.selectedParameters = _selectedParameters;
   }
 
 }

@@ -1,39 +1,12 @@
-<div class="topbar">
-    <div>
-        <div class="title">
-            <label>Scanner</label>
-        </div>
-        <div class="hour">
-
-        </div>
-    </div>
-    <div class="options" style="justify-content: space-between">
-        <div class="options" >
-            <div class="option_menu" (click)="goBack()">
-                <img src="https://via.placeholder.com/50 ">
-            </div>
-            <div class="option_menu">
-                <img src="https://via.placeholder.com/50 ">
-            </div>
+<app-navbar></app-navbar>
+<div class="options-container" *ngIf="!show">
+    <div class="option" *ngFor="let item of data; let i=index;">
+        <div style="padding-right:70px; flex-grow:1;text-align:left;">
+            {{item.name}}
         </div>
         <div>
-            <div class="option_menu" (click)="showChoseComponent()" style="float:right">
-                <img src="https://via.placeholder.com/50 ">
-            </div>
+            {{item.description}}
         </div>
-    </div>
-    <div>
-        <label class="menu">{{message}}</label>
-    </div>
-</div>
-<div class="options-container" *ngIf="!show">
-    <div class="option"  *ngFor="let item of data; let i=index;">
-        <div style="padding-right:70px; flex-grow:1;text-align:left;" >
-          {{item.name}}
-      </div>
-      <div>
-          {{item.value}}
-      </div>
     </div>
 </div>
 <div *ngIf="show">

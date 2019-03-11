@@ -11,6 +11,7 @@ import { ShowOptionComponent } from './components/shared/show-option/show-option
 import { SystemComponent } from './components/system/system.component';
 import { ShowOption2Component } from './components/shared/show-option2/show-option2.component';
 import { ShowDataComponent } from './components/show-data/show-data.component';
+import { ShowParametersComponent } from './components/show-parameters/show-parameters.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'scanner/options', component: ShowOptionComponent},
   { path: 'scanner/options2', component: ShowOption2Component},
   { path: 'scanner/show-data', component: ShowDataComponent},
+  { path: 'scanner/show-parameters', component: ShowParametersComponent}
 
 ];
 

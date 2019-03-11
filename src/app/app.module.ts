@@ -20,6 +20,7 @@ import { DropdownComponent } from './components/shared/dropdown/dropdown.compone
 import { ShowDataComponent } from './components/show-data/show-data.component';
 import { ShowParametersComponent } from './components/show-parameters/show-parameters.component';
 import { ChooseParametersComponent } from './components/choose-parameters/choose-parameters.component';
+import { ShowGraphicsComponent } from './components/show-graphics/show-graphics.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ChooseParametersComponent } from './components/choose-parameters/choose
     DropdownComponent,
     ShowDataComponent,
     ShowParametersComponent,
-    ChooseParametersComponent
+    ChooseParametersComponent,
+    ShowGraphicsComponent
   ],
   imports: [
     BrowserModule,

@@ -23,7 +23,7 @@ export class ShowDataComponent implements OnInit {
     this.navService.currentFatherSlug.subscribe(data => this.father = data);
     this.navService.currentSlug.subscribe(current => this.slug = current);
     this.navService.currentCase.subscribe((data: any) => {
-      this.data = data.cases_parameters;
+      this.data = data.cases_codes;
     });
   }
 

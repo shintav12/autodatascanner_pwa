@@ -7,7 +7,7 @@
     flex-wrap: wrap;
     padding-top: 15px;
     flex-direction: row;
-    margin-left:10px;
+    margin-left: 10px;
 }
 
 .option {
@@ -43,27 +43,4 @@
     border-color: #d1b121;
     color: white;
     background-color: #00091c;
-}
-
-.topbar {
-    display: flex;
-    width: 100%;
-    background-color: black;
-    overflow: hidden;
-    top: 0;
-    color: white;
-    flex-direction: column;
-}
-
-.topbar label {
-    margin: 0px;
-}
-
-.options {
-    background-color: #152143;
-    display: flex;
-    flex-direction: row;
-}
-.option_menu {
-    padding-right: 5px
 }

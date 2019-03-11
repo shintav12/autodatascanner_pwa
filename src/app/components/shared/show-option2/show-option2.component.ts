@@ -30,12 +30,20 @@ export class ShowOption2Component implements OnInit {
     this.navService.changeFatherId(id);
     this.navService.cahangeFatherSlug(slug);
     this.navService.changeSlug(slug);
+    console.log(slug);
     this.navService.changeMenu('Select a Data');
     if (type === 'data') {
-      this.route.navigate(['/scanner/show-data']);
-    } else {
-      this.route.navigate(['/scanner/options2']);
-    }
+      switch(slug){
+        case 'engine-data-1':
+        case 'engine-data-2':{
+          this.route.navigate(['/scanner/show-parameters']);
+        }
+        break;
+        default:{
+          this.route.navigate(['/scanner/show-data']);
+        }
+      }
+    }else 
+        this.route.navigate(['/scanner/options']);
   }
-
 }
