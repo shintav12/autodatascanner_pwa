@@ -49,12 +49,12 @@ export class BrandService {
   }
 
   getOptions(father_slug: string = '', system: number = 1): Observable<any> {
-    if (father_slug === '') { return this.http.get(environment.api + 'systems/options/').pipe(map(this.extractData)); }
-    return this.http.get(environment.api + 'systems/options/' + father_slug + '/' + system ).pipe(map(this.extractData));
+    if (father_slug === '') { return this.http.get(environment.api + 'brands/options/').pipe(map(this.extractData)); }
+    return this.http.get(environment.api + 'brands/options/' + father_slug + '/' + system ).pipe(map(this.extractData));
   }
 
   getCase() {
-    return this.http.get(environment.api + 'case').pipe(map(this.extractData));
+    return this.http.get(environment.api + 'brands/case').pipe(map(this.extractData));
   }
 
   private handleError<T> (operation = 'operation', result?: T) {
