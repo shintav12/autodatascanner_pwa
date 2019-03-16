@@ -75,4 +75,13 @@ export class ShowParametersComponent implements OnInit {
     this.show = !this.show;
     this.navService.changeSelectedParameters(this.data);
   }
+
+  checkIfSelected(item: any, index: number){
+    var search = this.aux.findIndex( item => item.index === index);
+    if(search != -1){
+      return true;
+    }else{
+      return false;
+    }
+  }
 }
