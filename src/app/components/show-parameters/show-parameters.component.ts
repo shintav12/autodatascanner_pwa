@@ -28,8 +28,8 @@ export class ShowParametersComponent implements OnInit {
     this.navService.currentMenu.subscribe(message => this.message = message);
     this.navService.currentFatherSlug.subscribe(data => this.father = data);
     this.navService.currentSlug.subscribe(current => this.slug = current);
-    this.navService.currentCase.subscribe((data: any) => {
-      this.data = this.originalArray = data.cases_parameters;
+    this.navService.currentParameters.subscribe((data: any) => {
+      this.data = this.originalArray = data;
     });
   }
 

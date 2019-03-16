@@ -22,9 +22,7 @@ export class ShowDataComponent implements OnInit {
     this.navService.currentMenu.subscribe(message => this.message = message);
     this.navService.currentFatherSlug.subscribe(data => this.father = data);
     this.navService.currentSlug.subscribe(current => this.slug = current);
-    this.navService.currentCase.subscribe((data: any) => {
-      this.data = data.cases_codes;
-    });
+    this.navService.currentFailurecodes.subscribe(data => this.data = data);
   }
 
   redirectToYear(brand_id: any) {

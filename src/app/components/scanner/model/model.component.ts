@@ -20,7 +20,6 @@ export class ModelComponent implements OnInit {
     this.navService.currentChosenCar.subscribe(brand_id => this.brand_id = brand_id);
     this.navService.currentYear.subscribe(year => this.year = year);
     this.brandService.getModels(this.brand_id,this.year).subscribe((data: {}) => {
-      console.log(data);
       this.models = data;
     });
     this.navService.changeMenu('Select Model Type');

@@ -20,7 +20,6 @@ export class EngineComponent implements OnInit {
     this.navService.currentYear.subscribe(year => this.year = year);
     this.navService.currentModel.subscribe(model => this.model = model);
     this.brandService.getEngines(this.brand_id,this.year,this.model).subscribe((data: {}) => {
-      console.log(data);
       this.engines = data;
     });
     this.navService.changeMenu('Select Engine Type');

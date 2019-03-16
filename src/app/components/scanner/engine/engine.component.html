@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <div class="container options-container ">
-    <div class="option" (click)="redirectToConfirmation(engine.engine)" *ngFor="let engine of engines.engines; let i=index;">
+    <div class="option" (click)="redirectToConfirmation(engine.engine)" *ngFor="let engine of engines; let i=index;">
         {{engine.engine}}
     </div>
 </div>

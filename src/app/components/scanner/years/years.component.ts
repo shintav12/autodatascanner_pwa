@@ -18,7 +18,6 @@ export class YearsComponent implements OnInit {
     this.navService.changeMenu('Select Year');
     this.navService.currentChosenCar.subscribe(brand_id => this.brand_id = brand_id);
     this.brandService.getYears(this.brand_id).subscribe((data: {}) => {
-      console.log(data);
       this.years = data;
     });
 

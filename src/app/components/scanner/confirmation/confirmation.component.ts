@@ -22,7 +22,6 @@ export class ConfirmationComponent implements OnInit {
     this.navService.currentModel.subscribe(model => this.model = model);
     this.navService.currentEngine.subscribe(engine => this.engine = engine);
     this.brandService.getCar(this.brand_id,this.year,this.model,this.engine).subscribe((data: {}) => {
-      console.log(data);
       this.car = data;
     });
   }

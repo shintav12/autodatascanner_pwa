@@ -23,6 +23,15 @@ export class CarsComponent implements OnInit {
     this.brandService.getCase().subscribe((data: {}) => {
       this.navService.changeCase(data);
     });
+    this.brandService.getFailurecodes().subscribe((data: {}) => {
+      this.navService.changeFailureCodes(data);
+    });
+    this.brandService.getSystems().subscribe((data: {}) => {
+      this.navService.changeSystem(data);
+    });
+    this.brandService.getParameters().subscribe((data: {}) => {
+      this.navService.ChangeParameters(data);
+    });
   }
 
   redirectToYear(brand_id: any) {

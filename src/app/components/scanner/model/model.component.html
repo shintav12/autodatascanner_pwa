@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <div class="options-container container">
-    <div class="option" (click)="redirectToEngineType(model.model)" *ngFor="let model of models.models">
-        {{model.model}}
+    <div class="option" (click)="redirectToEngineType(model.name)" *ngFor="let model of models">
+        {{model.name}}
     </div>
 </div>

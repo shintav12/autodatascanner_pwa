@@ -17,9 +17,7 @@ export class ChooseParametersComponent implements OnInit {
   ngOnInit() {
     this.navService.changeMenu('Codes Menu');
     this.navService.currentSlug.subscribe(current => this.slug = current);
-    this.navService.currentCase.subscribe((data: any) => {
-      this.data = data.cases_parameters;
-    });
+    this.navService.currentParameters.subscribe(current => this.data = current);
   }
 
 }
