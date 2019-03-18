@@ -24,9 +24,9 @@
                 <img class="dropbtn" *ngIf="!show" (click)="showOption()" src="https://via.placeholder.com/50" />
                 <div class="dropdown-content" *ngIf="showOptions" style="right:0;">
                     <div (click)="showChoseComponent()">PID List</div>
-                    <div>1 Graph</div>
-                    <div>2 Graph</div>
-                    <div>4 Graph</div>
+                    <div (click)="redirectToShowGraphics(1, data)">1 Graph</div>
+                    <div (click)="redirectToShowGraphics(2, data)">2 Graph</div>
+                    <div (click)="redirectToShowGraphics(4, data)">4 Graph</div>
                 </div>
             </div>
         </div>

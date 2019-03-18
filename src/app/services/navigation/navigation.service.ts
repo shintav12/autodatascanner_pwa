@@ -20,6 +20,8 @@ export class NavigationService {
   private systems = new BehaviorSubject(null);
   private parameters = new BehaviorSubject(null);
   private selectedParameters = new BehaviorSubject(null);
+  private graphParameters = new BehaviorSubject(null);
+  private graphNumber = new BehaviorSubject(1);
 
   currentMenu = this.menu.asObservable();
   currentChosenCar = this.chosen_car.asObservable();
@@ -35,8 +37,14 @@ export class NavigationService {
   currentSystem = this.systems.asObservable();
   currentParameters = this.parameters.asObservable();
   currentSelectedParameters = this.selectedParameters.asObservable();
+  currentGraphNumber = this.graphNumber.asObservable();
+  currentGraphParameters = this.graphNumber.asObservable();
 
   constructor() { }
+
+  changeGraphNumber(_number: number){
+    this.graphNumber.next(_number);
+  }
 
   changeMenu(newMenu: string) {
     this.menu.next(newMenu);
@@ -91,7 +99,7 @@ export class NavigationService {
   }
 
   changeSelectedParameters(_selectedParameters: any){
-    this.selectedParameters = _selectedParameters;
+    this.selectedParameters.next( _selectedParameters);
   }
 
 }

@@ -1,3 +1,44 @@
-<p>
-  show-graphics works!
-</p>
+<div class="topbar">
+    <div>
+        <div class="title">
+            <label>Scanner</label>
+        </div>
+        <div class="hour">
+
+        </div>
+    </div>
+    <div class="options" style="justify-content: space-between">
+        <div class="options">
+            <div class="option_menu" (click)="goBack()">
+                <img src="https://via.placeholder.com/50 ">
+            </div>
+            <div class="option_menu">
+                <img src="https://via.placeholder.com/50">
+            </div>
+        </div>
+    </div>
+    <div>
+        <label class="menu">{{message}}</label>
+    </div>
+</div>
+<div class="options-container">
+    <div *ngFor="let item of data; let i=index;" style="display:flex;">
+        <div class="option" style="display:flex; flex-direction: row; flex-grow: 1">
+            <div style="display:flex; flex-direction: column; justify-content: space-between;text-align: left; width: 160px">
+                <div>
+                    {{item.name}}
+                </div>
+                <div style="padding-left:5px">
+                    {{item.value}}
+                </div>
+                <div>
+                    {{item.range}}
+                </div>
+            </div>
+            <div>
+                <img src="../../../assets/img/graph.PNG" style="height: 100%; width: 580px;">
+            </div>
+        </div>
+
+    </div>
+</div>

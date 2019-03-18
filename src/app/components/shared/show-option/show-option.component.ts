@@ -21,9 +21,11 @@ export class ShowOptionComponent implements OnInit {
     this.navService.currentSlug.subscribe(current => this.current = current);
     this.navService.currentFatherSlug.subscribe(current => this.father = current);
     this.navService.currentSystemId.subscribe(current => this.systemId = current);
-    this.brandService.getOptions(this.father,this.systemId).subscribe((data: {}) => {
-      this.options = data;
+    this.brandService.getOptions(this.father,this.systemId).subscribe(data => {
+      this.options = data;      
+      if(data.length === 0) this.route.navigate(['/scanner/system']);
     });
+    
     this.navService.changeMenu('Select Data');
   }
 

@@ -15,7 +15,7 @@ export class SystemComponent implements OnInit {
   systems: any = [];
 
   ngOnInit() {
-    this.navService.currentSystem.subscribe(data => {this.systems = data; console.log(data);});
+    this.navService.currentSystem.subscribe(data => {this.systems = data;});
     this.navService.changeMenu('Select System');
   }
 

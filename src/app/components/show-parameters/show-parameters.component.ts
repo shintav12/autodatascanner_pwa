@@ -73,7 +73,6 @@ export class ShowParametersComponent implements OnInit {
       this.data = this.originalArray;
     }
     this.show = !this.show;
-    this.navService.changeSelectedParameters(this.data);
   }
 
   checkIfSelected(item: any, index: number){
@@ -83,5 +82,11 @@ export class ShowParametersComponent implements OnInit {
     }else{
       return false;
     }
+  }
+
+  redirectToShowGraphics(number: number, list:any){
+    this.navService.changeGraphNumber(number);
+    this.navService.changeSelectedParameters(list);
+    this.route.navigate(['/scanner/graphs']);
   }
 }
