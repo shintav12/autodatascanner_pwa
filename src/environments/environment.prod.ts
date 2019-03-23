@@ -1,4 +1,4 @@
 export const environment = {
-  api: 'http://www.scanner.api.nezkastudios.com/node/',
+  api: 'http://www.scanner.cursosautodata.com/api/',
   production: true
 };
