@@ -31,3 +31,27 @@
     color: white;
     background-color: #00091c;
 }
+
+.topbar {
+    display: flex;
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+    top: 0;
+    color: white;
+    flex-direction: column;
+}
+
+.topbar label {
+    margin: 0px;
+}
+
+.options-menu {
+    background-color: #152143;
+    display: flex;
+    flex-direction: row;
+}
+
+.option-menu {
+    padding-right: 5px
+}

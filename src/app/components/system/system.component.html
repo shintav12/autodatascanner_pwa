@@ -1,6 +1,36 @@
-<app-navbar></app-navbar>
+<div class="topbar">
+    <div>
+        <div class="title">
+            <label>Scanner</label>
+        </div>
+        <div class="hour">
+
+        </div>
+    </div>
+    <div class="options-menu">
+        <div class="option-menu" (click)="triggerModal(content)">
+            <img src="https://via.placeholder.com/50 ">
+        </div>
+        <div class="option-menu">
+            <img src="https://via.placeholder.com/50 ">
+        </div>
+    </div>
+    <div>
+        <label class="menu">Choose System</label>
+    </div>
+</div>
 <div class="container options-container ">
     <div class="option" (click)="redirectToOption(system.id)" *ngFor="let system of systems; let i=index;">
         {{system.name}}
     </div>
 </div>
+
+<ng-template #content let-modal>
+    <div class="modal-body">
+        <p>¿Seguro que desea salir?</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="redirectToHome(content)">Salir</button>
+        <button type="button" class="btn btn-light" (click)="modal.close()">Cerrar</button>
+    </div>
+</ng-template>

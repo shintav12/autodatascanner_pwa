@@ -21,6 +21,9 @@ import { ShowDataComponent } from './components/show-data/show-data.component';
 import { ShowParametersComponent } from './components/show-parameters/show-parameters.component';
 import { ChooseParametersComponent } from './components/choose-parameters/choose-parameters.component';
 import { ShowGraphicsComponent } from './components/show-graphics/show-graphics.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ModalComponent } from './components/shared/modal-component/modal-component.component';
+
 
 @NgModule({
   declarations: [
@@ -40,12 +43,14 @@ import { ShowGraphicsComponent } from './components/show-graphics/show-graphics.
     ShowDataComponent,
     ShowParametersComponent,
     ChooseParametersComponent,
-    ShowGraphicsComponent
+    ShowGraphicsComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NgbModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
