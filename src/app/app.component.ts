@@ -8,7 +8,7 @@ import { SwUpdate } from '@angular/service-worker';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AutodataScanner';
+  title = 'Solus';
 
   constructor(update: SwUpdate){
     update.available.subscribe(evenet => {
