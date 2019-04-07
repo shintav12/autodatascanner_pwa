@@ -10,15 +10,15 @@
     <div class="options" style="justify-content: space-between">
         <div class="options">
             <div class="option_menu" (click)="goBack()">
-                <img src="https://via.placeholder.com/50 ">
+                <img src="../../../assets/img/arrow.png">
             </div>
             <div class="option_menu">
-                <img src="https://via.placeholder.com/50">
+                <img src="../../../assets/img/home.png">
             </div>
         </div>
         <div class="options">
             <div class="option_menu" (click)="changeValues()">
-                <img src="https://via.placeholder.com/50 ">
+                <img src="../../../assets/img/deselect.png">
             </div>
         </div>
     </div>
@@ -29,10 +29,10 @@
 <div class="options-container" *ngIf="show">
     <div *ngFor="let item of data; let i=index;" style="display:flex;">
         <div class="option" style="display:flex; flex-direction: row; flex-grow: 1">
-            <div style="display:flex; flex-direction: column; justify-content: space-between;text-align: left; width: 160px">
-                <div>
-                    {{item.name}}
-                </div>
+            <div style="display:flex; flex-direction: column; justify-content: space-between;text-align: left; width: 200px">
+                <div style="overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;"> {{item.name}} </div>
                 <div style="padding-left:5px">
                     {{item.value}}
                 </div>
@@ -40,31 +40,32 @@
                     {{item.range}}
                 </div>
             </div>
-            <div>
-                <canvas baseChart width="400" height="400" [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" [plugins]="lineChartPlugins" (chartHover)="chartHovered($event)"
-                    (chartClick)="chartClicked($event)"></canvas>
-
+            <div style="width: 525px">
+                <div class="wrapper_image" style="display: block">
+                    <div class="sliding-background" style="display: block"></div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div class="options-container" *ngIf="!show">
-    <div *ngFor="let item of data; let i=index;" style="display:flex;">
-        <div class="option" style="display:flex; flex-direction: row; flex-grow: 1">
-            <div style="display:flex; flex-direction: column; justify-content: space-between;text-align: left; width: 160px">
-                <div>
-                    {{item.name}}
+    <div class="options-container" *ngIf="!show" style="display: block">
+        <div *ngFor="let item of data; let i=index;" style="display:flex;">
+            <div class="option" style="display:flex; flex-direction: row; flex-grow: 1">
+                <div style="display:flex; flex-direction: column; justify-content: space-between;text-align: left; width: 200px">
+                    <div style="overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;"> {{item.name}} </div>
+                    <div style="padding-left:5px">
+                        {{item.second_value}}
+                    </div>
+                    <div>
+                        {{item.second_range}}
+                    </div>
                 </div>
-                <div style="padding-left:5px">
-                    {{item.second_value}}
+                <div style="width: 525px">
+                    <div class="wrapper_image" style="display: block">
+                        <div class="sliding-background" style="display: block"></div>
+                    </div>
                 </div>
-                <div>
-                    {{item.second_range}}
-                </div>
-            </div>
-            <div>
-                <img src="../../../assets/img/graph.PNG" style="height: 100%; width: 580px;">
             </div>
         </div>
     </div>
-</div>

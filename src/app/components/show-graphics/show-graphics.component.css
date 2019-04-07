@@ -1,7 +1,8 @@
 .options-container {
-    display: flex;
+    display: block;
     position: relative;
     flex-grow: 1;
+    width: 750px;
     background-color: #ffffff;
     color: black;
     flex-wrap: wrap;
@@ -104,4 +105,24 @@
 
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
+}
+
+.wrapper_image {
+    overflow: hidden;
+}
+
+.sliding-background {
+    background: url("../../../assets/img/graph.PNG") repeat-x;
+    height: 80px;
+    width: 4563px;
+    animation: slide 60s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-1521px, 0, 0);
+    }
 }
