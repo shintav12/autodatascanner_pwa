@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.brandService.getCase().subscribe((data) => {
       this.navService.changeCase(data);
-      if(data.canbus_case == 1) 
+      if(data['canbus_case'] == 1) 
       {
         this.navService.changeMenu('Diagram');
         this.route.navigate(['/scanner/diagram']);
