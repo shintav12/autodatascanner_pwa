@@ -23,6 +23,7 @@ import { ChooseParametersComponent } from './components/choose-parameters/choose
 import { ShowGraphicsComponent } from './components/show-graphics/show-graphics.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalComponent } from './components/shared/modal-component/modal-component.component';
+import { DiagramComponent } from './diagram/diagram.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { ModalComponent } from './components/shared/modal-component/modal-compon
     ShowParametersComponent,
     ChooseParametersComponent,
     ShowGraphicsComponent,
-    ModalComponent
+    ModalComponent,
+    DiagramComponent
   ],
   imports: [
     BrowserModule,

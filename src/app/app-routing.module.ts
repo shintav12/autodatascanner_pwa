@@ -13,6 +13,7 @@ import { ShowOption2Component } from './components/shared/show-option2/show-opti
 import { ShowDataComponent } from './components/show-data/show-data.component';
 import { ShowParametersComponent } from './components/show-parameters/show-parameters.component';
 import { ShowGraphicsComponent } from './components/show-graphics/show-graphics.component';
+import { DiagramComponent } from './diagram/diagram.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -28,7 +29,8 @@ const routes: Routes = [
   { path: 'scanner/options2', component: ShowOption2Component},
   { path: 'scanner/show-data', component: ShowDataComponent},
   { path: 'scanner/show-parameters', component: ShowParametersComponent},
-  { path: 'scanner/graphs', component: ShowGraphicsComponent}
+  { path: 'scanner/graphs', component: ShowGraphicsComponent},
+  { path: 'scanner/diagram', component: DiagramComponent}
 
 ];
 

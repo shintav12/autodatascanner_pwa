@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NavigationService } from 'src/app/services/navigation/navigation.service';
+import { BrandService } from 'src/app/services/general/brand.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: Router, private navService: NavigationService, public brandService: BrandService) { }
 
   ngOnInit() {
+    this.brandService.getCase().subscribe((data) => {
+      this.navService.changeCase(data);
+      if(data.canbus_case == 1) 
+      {
+        this.navService.changeMenu('Diagram');
+        this.route.navigate(['/scanner/diagram']);
+      }
+
+    });
   }
 
 }

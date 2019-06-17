@@ -47,25 +47,26 @@
             </div>
         </div>
     </div>
-    <div class="options-container" *ngIf="!show" style="display: block">
-        <div *ngFor="let item of data; let i=index;" style="display:flex;">
-            <div class="option" style="display:flex; flex-direction: row; flex-grow: 1">
-                <div style="display:flex; flex-direction: column; justify-content: space-between;text-align: left; width: 200px">
-                    <div style="overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;"> {{item.name}} </div>
-                    <div style="padding-left:5px">
-                        {{item.second_value}}
-                    </div>
-                    <div>
-                        {{item.second_range}}
-                    </div>
+</div>
+<div class="options-container" *ngIf="!show" style="display: block">
+    <div *ngFor="let item of data; let i=index;" style="display:flex;">
+        <div class="option" style="display:flex; flex-direction: row; flex-grow: 1">
+            <div style="display:flex; flex-direction: column; justify-content: space-between;text-align: left; width: 200px">
+                <div style="overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;"> {{item.name}} </div>
+                <div style="padding-left:5px">
+                    {{item.second_value}}
                 </div>
-                <div style="width: 525px">
-                    <div class="wrapper_image" style="display: block">
-                        <div class="sliding-background" style="display: block"></div>
-                    </div>
+                <div>
+                    {{item.second_range}}
+                </div>
+            </div>
+            <div style="width: 525px">
+                <div class="wrapper_image" style="display: block">
+                    <div class="sliding-background" style="display: block"></div>
                 </div>
             </div>
         </div>
     </div>
+</div>

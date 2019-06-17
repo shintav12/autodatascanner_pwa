@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  api: 'http://localhost:3000/',
+  api: 'http://www.scanner.cursosautodata.com/api/',
+  images: 'http://54.166.162.19/solus/web_data/',
   production: true
 };
 
